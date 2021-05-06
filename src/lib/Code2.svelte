@@ -5,9 +5,8 @@
 <div>
   github
   <pre>
-  <!-- {@html `<style ✂prettier:content✂="JHtjc3NTdHJpbmd9"></style>`} -->
-<pre>
-  <code class="language-js hljs javascript"><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> reducer = (state: State, <span class="hljs-attr">action</span>: ActionType): <span class="hljs-function"><span class="hljs-params">State</span> =&gt;</span> {`{`}
+  <code class="language-js hljs javascript">
+    <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> reducer = (state: State, <span class="hljs-attr">action</span>: ActionType): <span class="hljs-function"><span class="hljs-params">State</span> =&gt;</span> {`{`}
   <span class="hljs-keyword">switch</span> (action.type) {`{`}
     <span class="hljs-keyword">case</span> START_FETCH_DATA:
       <span class="hljs-keyword">return</span> {`{`}
@@ -35,7 +34,6 @@
   }
 }
 </code></pre>
-</pre>
 </div>
 
 <style lang="scss">

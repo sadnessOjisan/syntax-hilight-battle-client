@@ -10,8 +10,12 @@
 </script>
 
 <main>
-  <Code skin={"github"} />
-  <Code2 skin={"github"} />
+  <div>
+    <Code skin={"github"} />
+  </div>
+  <div>
+    <Code2 skin={"github"} />
+  </div>
 </main>
 
 <style>

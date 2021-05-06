@@ -2,35 +2,39 @@
   export let skin: string;
 </script>
 
-<pre>
-  <!-- {@html `<style ✂prettier:content✂="JHtjc3NTdHJpbmd9"></style>`} -->
-  <!-- {@html `<style ✂prettier:content✂="Ym9keXtjb2xvcjogcmVkO30="></style>`} -->
-dark
-  <code class="language-tsx">
-    {`type PageState =
-        | undefined // 初期化時
-        | { isLoading: true; data: undefined; error: undefined } // ローディング中
-        | { isLoading: false; data: Posts[]; error: undefined } // ロード成功
-        | { isLoading: false; data: undefined; error: string } // ロード失敗
-      
-      export const Posts = (props: { pageState: PageState }) =&gt; {
-        if (props.pageState === undefined || props.pageState.isLoading) {
-          return &lt;div&gt;loading&lt;/div&gt;
-        }
-      
-        if (props.pageState.error !== undefined) {
-          return &lt;div&gt;{error}&lt;/div&gt;
-        }
-      
-        return (
-          &lt;div&gt;
-            {props.pageState.data.map(post =&gt; (
-              &lt;Post key={post.id} data={post} /&gt;
-            ))}
-          &lt;/div&gt;
-        )
-      }`}
-  </code></pre>
+<div>
+  github
+  <pre>
+  <code class="language-js hljs javascript">
+    <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> reducer = (state: State, <span class="hljs-attr">action</span>: ActionType): <span class="hljs-function"><span class="hljs-params">State</span> =&gt;</span> {`{`}
+  <span class="hljs-keyword">switch</span> (action.type) {`{`}
+    <span class="hljs-keyword">case</span> START_FETCH_DATA:
+      <span class="hljs-keyword">return</span> {`{`}
+        ...state,
+        <span class="hljs-attr">isLoading</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">data</span>: <span class="hljs-literal">undefined</span>,
+        <span class="hljs-attr">error</span>: <span class="hljs-literal">undefined</span>,
+      }
+    <span class="hljs-keyword">case</span> SUCCESS_FETCH_DATA:
+      <span class="hljs-keyword">return</span> {`{`}
+        ...state,
+        <span class="hljs-attr">isLoading</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">data</span>: action.payload,
+        <span class="hljs-attr">error</span>: <span class="hljs-literal">undefined</span>,
+      }
+    <span class="hljs-keyword">case</span> FAIL_FETCH_DATA:
+      <span class="hljs-keyword">return</span> {`{`}
+        ...state,
+        <span class="hljs-attr">isLoading</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">data</span>: <span class="hljs-literal">undefined</span>,
+        <span class="hljs-attr">error</span>: action.payload,
+      }
+    <span class="hljs-attr">default</span>:
+      <span class="hljs-keyword">return</span> state
+  }
+}
+</code></pre>
+</div>
 
 <style lang="scss">
   /* @import "highlight.js/styles/dark.css";  */
