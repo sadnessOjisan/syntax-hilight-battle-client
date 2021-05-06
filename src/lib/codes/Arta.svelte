@@ -2,7 +2,7 @@
 </script>
 
 <div>
-  a11y-light
+  arta
   <pre>
     <code class="language-js hljs javascript">
       <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> reducer = (state: State, <span class="hljs-attr">action</span>: ActionType): <span class="hljs-function"><span class="hljs-params">State</span> =&gt;</span> {`{`}
@@ -36,81 +36,62 @@
 </div>
 
 <style lang="scss">
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #222;
+  }
+  .hljs,
+  .hljs-subst {
+    color: #aaa;
+  }
+  .hljs-section {
+    color: #fff;
+  }
   .hljs-comment,
+  .hljs-meta,
   .hljs-quote {
-    color: #696969;
+    color: #444;
   }
-  .hljs-deletion,
-  .hljs-name,
+  .hljs-bullet,
   .hljs-regexp,
-  .hljs-selector-class,
-  .hljs-selector-id,
-  .hljs-tag,
-  .hljs-template-variable,
-  .hljs-variable {
-    color: #d91e18;
+  .hljs-string,
+  .hljs-symbol {
+    color: #fc3;
   }
+  .hljs-addition,
+  .hljs-number {
+    color: #0c6;
+  }
+  .hljs-attribute,
   .hljs-built_in,
   .hljs-builtin-name,
   .hljs-link,
   .hljs-literal,
-  .hljs-meta,
-  .hljs-number,
-  .hljs-params,
+  .hljs-template-variable,
   .hljs-type {
-    color: #aa5d00;
-  }
-  .hljs-attribute {
-    color: #aa5d00;
-  }
-  .hljs-addition,
-  .hljs-bullet,
-  .hljs-string,
-  .hljs-symbol {
-    color: green;
-  }
-  .hljs-section,
-  .hljs-title {
-    color: #007faa;
+    color: #32aaee;
   }
   .hljs-keyword,
+  .hljs-name,
+  .hljs-selector-class,
+  .hljs-selector-id,
   .hljs-selector-tag {
-    color: #7928a1;
+    color: #64a;
   }
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    background: #fefefe;
-    color: #545454;
-    padding: 0.5em;
+  .hljs-deletion,
+  .hljs-template-tag,
+  .hljs-title,
+  .hljs-variable {
+    color: #b16;
   }
-  .hljs-emphasis {
-    font-style: italic;
-  }
+  .hljs-doctag,
+  .hljs-section,
   .hljs-strong {
     font-weight: 700;
   }
-  @media screen and (-ms-high-contrast: active) {
-    .hljs-addition,
-    .hljs-attribute,
-    .hljs-built_in,
-    .hljs-builtin-name,
-    .hljs-bullet,
-    .hljs-comment,
-    .hljs-link,
-    .hljs-literal,
-    .hljs-meta,
-    .hljs-number,
-    .hljs-params,
-    .hljs-quote,
-    .hljs-string,
-    .hljs-symbol,
-    .hljs-type {
-      color: highlight;
-    }
-    .hljs-keyword,
-    .hljs-selector-tag {
-      font-weight: 700;
-    }
+  .hljs-emphasis {
+    font-style: italic;
   }
 </style>
