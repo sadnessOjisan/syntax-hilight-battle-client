@@ -1,10 +1,10 @@
 <script lang="ts">
- export let skin:string;
+  export let skin: string;
 </script>
 
 <pre>
-  <!-- {@html `<style>${cssString}</style>`} -->
-  <!-- {@html `<style>body{color: red;}</style>`} -->
+  <!-- {@html `<style ✂prettier:content✂="JHtjc3NTdHJpbmd9"></style>`} -->
+  <!-- {@html `<style ✂prettier:content✂="Ym9keXtjb2xvcjogcmVkO30="></style>`} -->
 dark
   <code class="language-tsx">
     {`type PageState =
@@ -31,9 +31,59 @@ dark
         )
       }`}
   </code></pre>
-  
-  <style lang="scss">
-    /* @import "highlight.js/styles/dark.css";  */
- 
-    .hljs{display:block;overflow-x:auto;padding:.5em;background:#444}.hljs-keyword,.hljs-link,.hljs-literal,.hljs-section,.hljs-selector-tag{color:#fff}.hljs,.hljs-subst{color:#ddd}.hljs-addition,.hljs-attribute,.hljs-built_in,.hljs-bullet,.hljs-name,.hljs-string,.hljs-symbol,.hljs-template-tag,.hljs-template-variable,.hljs-title,.hljs-type,.hljs-variable{color:#d88}.hljs-comment,.hljs-deletion,.hljs-meta,.hljs-quote{color:#777}.hljs-doctag,.hljs-keyword,.hljs-literal,.hljs-name,.hljs-section,.hljs-selector-tag,.hljs-strong,.hljs-title,.hljs-type{font-weight:700}.hljs-emphasis{font-style:italic}
-  </style>
+
+<style lang="scss">
+  /* @import "highlight.js/styles/dark.css";  */
+
+  .hljs {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    background: #444;
+  }
+  .hljs-keyword,
+  .hljs-link,
+  .hljs-literal,
+  .hljs-section,
+  .hljs-selector-tag {
+    color: #fff;
+  }
+  .hljs,
+  .hljs-subst {
+    color: #ddd;
+  }
+  .hljs-addition,
+  .hljs-attribute,
+  .hljs-built_in,
+  .hljs-bullet,
+  .hljs-name,
+  .hljs-string,
+  .hljs-symbol,
+  .hljs-template-tag,
+  .hljs-template-variable,
+  .hljs-title,
+  .hljs-type,
+  .hljs-variable {
+    color: #d88;
+  }
+  .hljs-comment,
+  .hljs-deletion,
+  .hljs-meta,
+  .hljs-quote {
+    color: #777;
+  }
+  .hljs-doctag,
+  .hljs-keyword,
+  .hljs-literal,
+  .hljs-name,
+  .hljs-section,
+  .hljs-selector-tag,
+  .hljs-strong,
+  .hljs-title,
+  .hljs-type {
+    font-weight: 700;
+  }
+  .hljs-emphasis {
+    font-style: italic;
+  }
+</style>

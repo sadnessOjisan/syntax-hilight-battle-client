@@ -1,11 +1,12 @@
-<script lang="ts">import { onMount } from 'svelte';
-import hljs from 'highlight.js';
-  import Code from './lib/Code.svelte'
-  import Code2 from './lib/Code2.svelte'
-	
+<script lang="ts">
+  import { onMount } from "svelte";
+  import hljs from "highlight.js";
+  import Code from "./lib/Code.svelte";
+  import Code2 from "./lib/Code2.svelte";
+
   onMount(async () => {
     hljs.highlightAll();
-	});
+  });
 </script>
 
 <main>
@@ -15,5 +16,3 @@ import hljs from 'highlight.js';
 
 <style>
 </style>
-
-
