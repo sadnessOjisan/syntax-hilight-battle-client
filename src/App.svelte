@@ -7,11 +7,13 @@
   let choice;
 
   onMount(async () => {
-    fetch(
-      "https://syntax-hilight-battle-api-xbwn74fo6q-an.a.run.app/battle"
-    ).then((data) => {
-      console.log(data);
-    });
+    fetch("https://syntax-hilight-battle-api-xbwn74fo6q-an.a.run.app/battle")
+      .then((data) => {
+        console.log(data);
+      })
+      .then((e) => {
+        console.error(e);
+      });
     hljs.highlightAll();
   });
 
