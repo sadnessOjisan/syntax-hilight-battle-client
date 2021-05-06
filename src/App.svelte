@@ -23,7 +23,7 @@
   };
 
   let choices: TResponse;
-  let pair: TResponse;
+  let pair: TResponse = [];
 
   const getPair = (choices: TResponse) => {
     let pair: TResponse;
