@@ -22,13 +22,22 @@
 </script>
 
 <main>
-  <div on:click={handleClick}>
-    <Code skin={"github"} />
-  </div>
-  <div on:click={handleClick}>
-    <Code skin={"a11yDark"} />
+  <div class="codes">
+    <div on:click={handleClick} class="code">
+      <Code skin={"a11y-light"} />
+    </div>
+    <div on:click={handleClick} class="code">
+      <Code skin={"a11y-dark"} />
+    </div>
   </div>
 </main>
 
 <style>
+  .codes {
+    display: flex;
+  }
+
+  .code {
+    cursor: pointer;
+  }
 </style>
