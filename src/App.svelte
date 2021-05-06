@@ -58,6 +58,9 @@
     let other: SH = pair.filter((p) => p.id !== syntaxHilight.id)[0];
     fetch("https://syntax-hilight-battle-api-xbwn74fo6q-an.a.run.app/save", {
       method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
       body: JSON.stringify({
         winner_id: syntaxHilight.id,
         looser_id: other.id,
