@@ -2,7 +2,6 @@
   import { onMount } from "svelte";
   import hljs from "highlight.js";
   import Code from "./lib/Code.svelte";
-  import Code2 from "./lib/Code2.svelte";
 
   let choice;
 
@@ -27,7 +26,7 @@
     <Code skin={"github"} />
   </div>
   <div on:click={handleClick}>
-    <Code2 skin={"github"} />
+    <Code skin={"a11yDark"} />
   </div>
 </main>
 

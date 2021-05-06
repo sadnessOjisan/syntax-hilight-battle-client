@@ -1,93 +1,21 @@
 <script lang="ts">
-  export let skin: string;
+  import A11yDark from "./codes/A11yDark.svelte";
+
+  import Dark from "./codes/Dark.svelte";
+  import Github from "./codes/Github.svelte";
+  import type { StyleKey } from "./const/component-pair";
+
+  export let skin: StyleKey;
 </script>
 
 <div>
-  github
-  <pre>
-  <code class="language-js hljs javascript">
-    <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> reducer = (state: State, <span class="hljs-attr">action</span>: ActionType): <span class="hljs-function"><span class="hljs-params">State</span> =&gt;</span> {`{`}
-  <span class="hljs-keyword">switch</span> (action.type) {`{`}
-    <span class="hljs-keyword">case</span> START_FETCH_DATA:
-      <span class="hljs-keyword">return</span> {`{`}
-        ...state,
-        <span class="hljs-attr">isLoading</span>: <span class="hljs-literal">true</span>,
-        <span class="hljs-attr">data</span>: <span class="hljs-literal">undefined</span>,
-        <span class="hljs-attr">error</span>: <span class="hljs-literal">undefined</span>,
-      }
-    <span class="hljs-keyword">case</span> SUCCESS_FETCH_DATA:
-      <span class="hljs-keyword">return</span> {`{`}
-        ...state,
-        <span class="hljs-attr">isLoading</span>: <span class="hljs-literal">false</span>,
-        <span class="hljs-attr">data</span>: action.payload,
-        <span class="hljs-attr">error</span>: <span class="hljs-literal">undefined</span>,
-      }
-    <span class="hljs-keyword">case</span> FAIL_FETCH_DATA:
-      <span class="hljs-keyword">return</span> {`{`}
-        ...state,
-        <span class="hljs-attr">isLoading</span>: <span class="hljs-literal">false</span>,
-        <span class="hljs-attr">data</span>: <span class="hljs-literal">undefined</span>,
-        <span class="hljs-attr">error</span>: action.payload,
-      }
-    <span class="hljs-attr">default</span>:
-      <span class="hljs-keyword">return</span> state
-  }
-}
-</code></pre>
+  {#if skin === "github"}
+    <Github />
+  {:else if skin === "dark"}
+    <Dark />
+  {:else if skin === "a11yDark"}
+    <A11yDark />
+  {:else}
+    <div>{skin}</div>
+  {/if}
 </div>
-
-<style lang="scss">
-  /* @import "highlight.js/styles/dark.css";  */
-
-  .hljs {
-    display: block;
-    overflow-x: auto;
-    padding: 0.5em;
-    background: #444;
-  }
-  .hljs-keyword,
-  .hljs-link,
-  .hljs-literal,
-  .hljs-section,
-  .hljs-selector-tag {
-    color: #fff;
-  }
-  .hljs,
-  .hljs-subst {
-    color: #ddd;
-  }
-  .hljs-addition,
-  .hljs-attribute,
-  .hljs-built_in,
-  .hljs-bullet,
-  .hljs-name,
-  .hljs-string,
-  .hljs-symbol,
-  .hljs-template-tag,
-  .hljs-template-variable,
-  .hljs-title,
-  .hljs-type,
-  .hljs-variable {
-    color: #d88;
-  }
-  .hljs-comment,
-  .hljs-deletion,
-  .hljs-meta,
-  .hljs-quote {
-    color: #777;
-  }
-  .hljs-doctag,
-  .hljs-keyword,
-  .hljs-literal,
-  .hljs-name,
-  .hljs-section,
-  .hljs-selector-tag,
-  .hljs-strong,
-  .hljs-title,
-  .hljs-type {
-    font-weight: 700;
-  }
-  .hljs-emphasis {
-    font-style: italic;
-  }
-</style>
