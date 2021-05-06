@@ -42,7 +42,6 @@
     fetch("https://syntax-hilight-battle-api-xbwn74fo6q-an.a.run.app/battle")
       .then((res) => res.json())
       .then((data) => {
-        console.log("data", data);
         if (!isValidResponse(data)) {
           throw new Error("invalid data");
         }
@@ -55,15 +54,22 @@
     hljs.highlightAll();
   });
 
-  function handleClick() {
-    alert("clicked");
+  function handleClick(syntaxHilight: SH) {
+    let other: SH = pair.filter((p) => p.id !== syntaxHilight.id)[0];
+    fetch("https://syntax-hilight-battle-api-xbwn74fo6q-an.a.run.app/save", {
+      method: "POST",
+      body: JSON.stringify({
+        winner_id: syntaxHilight.id,
+        looser_id: other.id,
+      }),
+    }).catch((e) => console.error(e));
   }
 </script>
 
 <main>
   <div class="codes">
     {#each pair as p}
-      <div on:click={handleClick} class="code">
+      <div on:click={() => handleClick(p)} class="code">
         <Code skin={p.name} />
       </div>
     {/each}
