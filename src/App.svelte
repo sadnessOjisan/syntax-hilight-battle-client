@@ -62,12 +62,11 @@
 
 <main>
   <div class="codes">
-    <div on:click={handleClick} class="code">
-      <Code skin={"a11y-light"} />
-    </div>
-    <div on:click={handleClick} class="code">
-      <Code skin={"a11y-dark"} />
-    </div>
+    {#each pair as p}
+      <div on:click={handleClick} class="code">
+        <Code skin={p.name} />
+      </div>
+    {/each}
   </div>
 </main>
 
