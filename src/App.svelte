@@ -100,7 +100,7 @@
     min-height: 100vh;
   }
   main {
-    max-width: 1080px;
+    max-width: 1024px;
     margin: 0 auto;
     padding: 16px;
     padding-top: 32px;
@@ -121,6 +121,10 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      margin-top: 36px;
+    }
   }
 
   .code {
@@ -128,6 +132,9 @@
     cursor: pointer;
     &:not(:first-child) {
       margin-top: 24px;
+      @media (min-width: 1024px) {
+        margin-top: initial;
+      }
     }
   }
 </style>
