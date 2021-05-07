@@ -100,10 +100,12 @@
     min-height: 100vh;
   }
   main {
-    max-width: 1024px;
     margin: 0 auto;
     padding: 16px;
     padding-top: 32px;
+    @media (min-width: 1080px) {
+      max-width: 1200px;
+    }
     > h2 {
       color: white;
       text-align: center;
@@ -121,7 +123,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 20px;
-    @media (min-width: 1024px) {
+    @media (min-width: 1080px) {
       flex-direction: row;
       margin-top: 36px;
     }
@@ -130,10 +132,15 @@
   .code {
     margin-right: 24px;
     cursor: pointer;
+    width: 100%;
+    @media (min-width: 1080px) {
+      width: 50%;
+    }
     &:not(:first-child) {
       margin-top: 24px;
-      @media (min-width: 1024px) {
+      @media (min-width: 1080px) {
         margin-top: initial;
+        width: 50%;
       }
     }
   }
