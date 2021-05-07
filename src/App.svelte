@@ -79,7 +79,7 @@
   </div>
 </main>
 
-<style>
+<style lang="scss">
   .codes {
     display: flex;
   }
