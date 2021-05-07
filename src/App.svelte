@@ -66,6 +66,8 @@
         looser_id: other.id,
       }),
     }).catch((e) => console.error(e));
+
+    pair = getPair(choices);
   }
 </script>
 
@@ -73,20 +75,12 @@
   <main>
     <h2>好きな方をクリックしてください。</h2>
     <div class="codes">
-      <!-- {#each pair as p}
-      <div on:click={() => handleClick(p)} class="code">
-        <h2 class="name">{p.name}</h2>
-        <Code skin={p.name} />
-      </div>
-    {/each} -->
-      <div on:click={() => handleClick({ id: 1, name: "arta" })} class="code">
-        <h2 class="name">{"arta"}</h2>
-        <Code skin={"agate"} />
-      </div>
-      <div on:click={() => handleClick({ id: 2, name: "agate" })} class="code">
-        <h2 class="name">{"arta"}</h2>
-        <Code skin={"arta"} />
-      </div>
+      {#each pair as p}
+        <div on:click={() => handleClick(p)} class="code">
+          <h2 class="name">{p.name}</h2>
+          <Code skin={p.name} />
+        </div>
+      {/each}
     </div>
   </main>
 </div>
