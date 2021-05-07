@@ -38,7 +38,7 @@
 <style lang="scss">
   .hljs-comment,
   .hljs-quote {
-    color: #6c6b5a;
+    color: #7e7887;
   }
   .hljs-attribute,
   .hljs-link,
@@ -49,7 +49,7 @@
   .hljs-tag,
   .hljs-template-variable,
   .hljs-variable {
-    color: #ba6236;
+    color: #be4678;
   }
   .hljs-built_in,
   .hljs-builtin-name,
@@ -58,38 +58,38 @@
   .hljs-number,
   .hljs-params,
   .hljs-type {
-    color: #ae7313;
+    color: #aa573c;
   }
   .hljs-bullet,
   .hljs-string,
   .hljs-symbol {
-    color: #7d9726;
+    color: #2a9292;
   }
   .hljs-section,
   .hljs-title {
-    color: #36a166;
+    color: #576ddb;
   }
   .hljs-keyword,
   .hljs-selector-tag {
-    color: #5f9182;
+    color: #955ae7;
   }
   .hljs-addition,
   .hljs-deletion {
-    color: #22221b;
+    color: #19171c;
     display: inline-block;
     width: 100%;
   }
   .hljs-deletion {
-    background-color: #ba6236;
+    background-color: #be4678;
   }
   .hljs-addition {
-    background-color: #7d9726;
+    background-color: #2a9292;
   }
   .hljs {
     display: block;
     overflow-x: auto;
-    background: #f4f3ec;
-    color: #5f5e4e;
+    background: #19171c;
+    color: #8b8792;
     padding: 0.5em;
   }
   .hljs-emphasis {

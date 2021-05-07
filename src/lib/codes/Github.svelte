@@ -48,7 +48,7 @@
     color: #998;
     font-style: italic;
   }
-  　　 .hljs-keyword,
+  .hljs-keyword,
   .hljs-selector-tag,
   .hljs-subst {
     color: #333;
