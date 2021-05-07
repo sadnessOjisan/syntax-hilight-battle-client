@@ -2,7 +2,6 @@
 </script>
 
 <div>
-  atelier-cave-dark
   <pre>
     <code class="language-js hljs javascript">
       <span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> reducer = (state: State, <span class="hljs-attr">action</span>: ActionType): <span class="hljs-function"><span class="hljs-params">State</span> =&gt;</span> {`{`}

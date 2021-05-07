@@ -69,22 +69,65 @@
   }
 </script>
 
-<main>
-  <div class="codes">
-    {#each pair as p}
+<div class="body">
+  <main>
+    <h2>好きな方をクリックしてください。</h2>
+    <div class="codes">
+      <!-- {#each pair as p}
       <div on:click={() => handleClick(p)} class="code">
+        <h2 class="name">{p.name}</h2>
         <Code skin={p.name} />
       </div>
-    {/each}
-  </div>
-</main>
+    {/each} -->
+      <div on:click={() => handleClick({ id: 1, name: "arta" })} class="code">
+        <h2 class="name">{"arta"}</h2>
+        <Code skin={"agate"} />
+      </div>
+      <div on:click={() => handleClick({ id: 2, name: "agate" })} class="code">
+        <h2 class="name">{"arta"}</h2>
+        <Code skin={"arta"} />
+      </div>
+    </div>
+  </main>
+</div>
 
 <style lang="scss">
+  .body {
+    font-family: "Lato", "Noto Sans JP", "ヒラギノ角ゴ ProN",
+      "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック",
+      "MS PGothic", sans-serif;
+    background-color: rgb(9, 48, 0);
+    min-height: 100vh;
+  }
+  main {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 16px;
+    padding-top: 32px;
+    > h2 {
+      color: white;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+
+  .name {
+    color: white;
+    margin-bottom: 12px;
+    font-size: 20px;
+    text-align: center;
+  }
   .codes {
     display: flex;
+    flex-direction: column;
+    margin-top: 20px;
   }
 
   .code {
+    margin-right: 24px;
     cursor: pointer;
+    &:not(:first-child) {
+      margin-top: 24px;
+    }
   }
 </style>
